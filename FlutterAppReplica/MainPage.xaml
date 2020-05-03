@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="FlutterAppReplica.MainPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:customrenderers="clr-namespace:FlutterAppReplica.CustomRenderers"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <StackLayout HorizontalOptions="Center" VerticalOptions="Start">
+        <!--  Place new controls here  -->
+        <Grid>
+            <Image Source="background.png" />
+            <Image
+                x:Name="FirstLight"
+                Margin="30,0,0,0"
+                HorizontalOptions="Start"
+                Source="light1.png"
+                VerticalOptions="Start" />
+            <Image
+                x:Name="SecondLight"
+                HorizontalOptions="Center"
+                Source="light2.png"
+                VerticalOptions="Start" />
+            <Image
+                x:Name="Clock"
+                Margin="0,40,30,0"
+                HorizontalOptions="End"
+                Source="clock.png"
+                VerticalOptions="Start" />
+            <Label
+                x:Name="LoginLabel"
+                Padding="0,70,0,0"
+                FontAttributes="Bold"
+                FontSize="40"
+                HorizontalOptions="Center"
+                Text="Login"
+                TextColor="White"
+                VerticalOptions="Center" />
+        </Grid>
+        <Frame
+            x:Name="MAinFrame"
+            Margin="20"
+            CornerRadius="10"
+            HasShadow="True">
+            <StackLayout>
+                <customrenderers:PlainEntry Placeholder="Email or Phone Number" />
+                <BoxView BackgroundColor="LightGray" HeightRequest="1" />
+                <customrenderers:PlainEntry Placeholder="Password" />
+            </StackLayout>
+        </Frame>
+        <Button
+            x:Name="MainButton"
+            Margin="20"
+            BackgroundColor="#696edd"
+            Clicked="Button_Clicked"
+            CornerRadius="10"
+            Text="Login"
+            TextColor="White" />
+        <Label
+            x:Name="MainLabel"
+            Margin="0,50,0,0"
+            HorizontalOptions="Center"
+            Text="Forgot Password ?"
+            TextColor="#696edd" />
+    </StackLayout>
+
+</ContentPage>
